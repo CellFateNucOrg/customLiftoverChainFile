@@ -7,10 +7,12 @@ Older worm datasets are sometimes based on old genome versions that do not have 
 ## Usage
 
 Use the **_prepareForliftover.sh_** script to download genomes, convert them to 2bit format and make a chrom.sizes file.
-To use it you must change the genomeVer="WS235" on the 5th line to the version you are interested in.
+To use it you must change the genomeVer="WS235" on the 5th line to the version you are interested in. you must run this script twice, once to process the WS235 version and once for the genome version of interest.
 
 Use the **_makeLiftoverFile.sh_** script to take in the genome and chrom.sizes files and create a liftover chain file using pyoverchain.
-To use it you must change the genomveVer="WS190" on the 11th line to the version you want to convert to WS235 (genomeVerNew). This script can be run as a batch script on the server.
+To use it you must change the genomveVer="WS190" on the 11th line to the version you want to conver from. This script can be run as a batch script on the server. (takes about half an hour with current settings of 4 cores).
+
+Put these scripts in the $HOME/data/ folder created below and run them from there.  
 
 ## Output
 A directory with name liftover_WSXXX_WS235 and in it two liftover files: 
