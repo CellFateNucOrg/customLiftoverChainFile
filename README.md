@@ -14,8 +14,8 @@ To use it you must change the genomveVer="WS190" on the 11th line to the version
 
 ## Output
 A directory with name liftover_WSXXX_WS235 and in it two liftover files: 
-1) WSXXX.to.WS235.over.chain which has the wormbase style chromosome names. 
-2) WSXXXtoWS235_ucscFormat.chain which has the UCSC style chromosome names. This is necessary if you are going to use it with rtracklayer::import.chain and liftover in R.
+1) **WSXXX.to.WS235.over.chain** which has the wormbase style chromosome names. 
+2) **WSXXXtoWS235_ucscFormat.chain** which has the UCSC style chromosome names. This is necessary if you are going to use it with rtracklayer::import.chain and liftover in R.
 
 ## Prerequisites
 Running these scripts requires installation of linux based ucsc tools (instructions derived from here: http://genomewiki.ucsc.edu/index.php/DoSameSpeciesLiftOver.pl) which provides the tools to convert to 2bit and make a chrom.sizes file. However running the perl script to create the liftover file required some software to run the server and i could not get it to work. So in addition I used pyOverChain python library to create the liftover chain.
